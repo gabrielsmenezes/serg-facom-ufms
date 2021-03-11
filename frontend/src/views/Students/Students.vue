@@ -12,21 +12,25 @@
 
 <script>
 import PersonCardList from "@/components/PersonCardList"
-import database from "@/database"
+import api from "@/api/backend-api"
 
 export default {
   components: {
     PersonCardList
   },
-  computed: {
-      students() {
-        return database.getStudents()
-      }
+
+  mounted() {
+    api.getStudents().then(response => {this.students = response.data}).catch(reason => console.log(reason))
   },
 
   methods: {
     clickHandler(id) {
       this.$router.push({name: "Student", params: {id: id}})
+    }
+  },
+  data() {
+    return {
+      students: []
     }
   }
 }
