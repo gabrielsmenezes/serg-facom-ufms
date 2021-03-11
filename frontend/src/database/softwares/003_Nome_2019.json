@@ -1,0 +1,7 @@
+{
+  "id": 3,
+  "name": "APIMiner",
+  "link": "http://apiminer.org/",
+  "description": "instrumenting JavaDocs with source code examples",
+  "type": "DATASET"
+}
