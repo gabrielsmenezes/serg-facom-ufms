@@ -12,7 +12,7 @@
 
 <script>
 import PersonCardList from "@/components/PersonCardList"
-import database from "@/database"
+import api from "@/api/backend-api"
 
 export default {
   components: {
@@ -20,7 +20,11 @@ export default {
   },
 
   mounted() {
-    database.getProfessors()
+    api.getProfessors().then(response => {
+      this.professors = response.data
+    }).catch(error => {
+      this.errors.push(error)
+    })
   },
 
   data() {

@@ -21,6 +21,7 @@ public class Person extends BaseEntity {
 
     private String name;
 
+    @Lob
     private String imageSource;
 
     @Lob

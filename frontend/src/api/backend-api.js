@@ -7,6 +7,9 @@ const AXIOS = axios.create({
 
 
 export default {
+    getProfessors(){
+        return AXIOS.get(`/professors`)
+    },
     hello() {
         return AXIOS.get(`/hello`);
     },
