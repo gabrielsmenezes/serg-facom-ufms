@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "name": "Code Sample Project",
+  "description": "Description Description Description Description Description Description Description Description",
+  "funding_organization": "CNPq",
+  "students_id": [1],
+  "professors_id": [1],
+  "coordinator_name": "Bruno Cafeo"
+}
