@@ -13,7 +13,6 @@ import com.example.sergfacomufms.domain.project.Project;
 import com.example.sergfacomufms.domain.publication.Publication;
 import com.example.sergfacomufms.domain.researchline.ResearchLine;
 import com.example.sergfacomufms.domain.student.Student;
-import de.jonashackt.springbootvuejs.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
