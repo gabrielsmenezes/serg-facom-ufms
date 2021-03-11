@@ -10,8 +10,14 @@ export default {
     getProfessors(){
         return AXIOS.get(`/professors`)
     },
+    getProfessorById(id){
+        return AXIOS.get(`/professors/${id}`)
+    },
     getStudents(){
         return AXIOS.get(`/students`)
+    },
+    getStudentById(id){
+        return AXIOS.get(`/students/${id}`)
     },
     hello() {
         return AXIOS.get(`/hello`);

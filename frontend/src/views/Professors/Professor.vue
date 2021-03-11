@@ -11,15 +11,14 @@
 
 <script>
 import PersonPerfil from "@/components/PersonPerfil"
-import database from "@/database"
-
+import api from "@/api/backend-api"
 export default {
   components: {
     PersonPerfil
   },
 
   mounted() {
-    this.$http.get("http://localhost:8080/professors/"+this.$route.params.id).then(response => this.professor = response.data)
+    api.getProfessorById(this.$route.params.id).then(response => this.professor = response.data).catch(reason => console.log(reason))
   },
 
   data() {
