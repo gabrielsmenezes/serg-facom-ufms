@@ -23,7 +23,7 @@ export default {
     api.getProfessors().then(response => {
       this.professors = response.data
     }).catch(error => {
-      this.errors.push(error)
+      console.log(error)
     })
   },
 
