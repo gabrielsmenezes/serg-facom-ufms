@@ -1,4 +1,4 @@
-package com.example.sergfacomufms.domain.professor.usecases;
+package com.example.sergfacomufms.domain.professor.usecases.getprofessorsnamesandimages;
 
 import java.util.List;
 
