@@ -12,4 +12,5 @@ import java.io.Serializable;
 public class ProjectDTO implements Serializable {
     private Long id;
     private String name;
+    private String fundingOrganization;
 }

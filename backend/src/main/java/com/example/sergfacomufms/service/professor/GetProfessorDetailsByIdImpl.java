@@ -30,7 +30,7 @@ public class GetProfessorDetailsByIdImpl implements GetProfessorDetailsById {
     }
 
     private List<ProjectDTO> getProjects(com.example.sergfacomufms.domain.professor.Professor professor) {
-        return professor.getOwner().getProjects().stream().map(project -> ProjectDTO.builder().id(project.getId()).name(project.getName()).build()).collect(Collectors.toList());
+        return professor.getOwner().getProjects().stream().map(project -> ProjectDTO.builder().id(project.getId()).name(project.getName()).fundingOrganization(project.getFundingOrganization()).build()).collect(Collectors.toList());
     }
 
     private List<PublicationDTO> getPublications(com.example.sergfacomufms.domain.professor.Professor professor) {

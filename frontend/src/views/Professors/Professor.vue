@@ -12,6 +12,7 @@
 <script>
 import PersonPerfil from "@/components/PersonPerfil"
 import api from "@/api/backend-api"
+
 export default {
   components: {
     PersonPerfil
