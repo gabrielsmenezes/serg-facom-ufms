@@ -2,7 +2,7 @@
   <div id="student">
     <b-container>
       <person-perfil
-          v-bind:person="this.getStudentById"
+          v-bind:person="this.student"
       />
     </b-container>
   </div>
