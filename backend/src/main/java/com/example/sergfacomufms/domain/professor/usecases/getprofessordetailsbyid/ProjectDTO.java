@@ -1,4 +1,15 @@
 package com.example.sergfacomufms.domain.professor.usecases.getprofessordetailsbyid;
 
-public class ProjectDTO {
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@Builder
+@Getter
+@Setter
+public class ProjectDTO implements Serializable {
+    private Long id;
+    private String name;
 }
