@@ -1,6 +1,7 @@
-package com.example.sergfacomufms.domain.professor.usecases.getprofessordetailsbyid;
+package com.example.sergfacomufms.domain.student.usecases.getstudentdetailsbyid;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -10,3 +11,4 @@ public class InterestAreaDTO implements Serializable {
     private Long id;
     private String name;
 }
+

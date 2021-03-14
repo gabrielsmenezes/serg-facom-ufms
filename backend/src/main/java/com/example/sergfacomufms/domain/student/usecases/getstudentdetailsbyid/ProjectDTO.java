@@ -1,4 +1,4 @@
-package com.example.sergfacomufms.domain.professor.usecases.getprofessordetailsbyid;
+package com.example.sergfacomufms.domain.student.usecases.getstudentdetailsbyid;
 
 import lombok.Builder;
 import lombok.Data;
