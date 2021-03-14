@@ -17,4 +17,6 @@ public class PersonDTO {
     private List<InterestAreaDTO> interestAreas;
     private List<PublicationDTO> publications;
     private List<ProjectDTO> projects;
+    private List<StudentDTO> students;
+    private List<CourseDTO> courses;
 }
