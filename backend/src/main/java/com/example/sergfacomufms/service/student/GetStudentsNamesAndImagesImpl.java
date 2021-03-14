@@ -1,7 +1,7 @@
 package com.example.sergfacomufms.service.student;
 
-import com.example.sergfacomufms.domain.student.usecases.GetStudentsNamesAndImages;
-import com.example.sergfacomufms.domain.student.usecases.StudentDTO;
+import com.example.sergfacomufms.domain.student.usecases.getstudentsnamesandimages.GetStudentsNamesAndImages;
+import com.example.sergfacomufms.domain.student.usecases.getstudentsnamesandimages.StudentDTO;
 import com.example.sergfacomufms.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +20,7 @@ public class GetStudentsNamesAndImagesImpl implements GetStudentsNamesAndImages 
         return studentRepository.findAll().stream().map(student ->
                 StudentDTO.
                         builder().
+                        id(student.getId()).
                         name(student.getOwner().getName()).
                         imageSource(student.getOwner().getImageSource()).build()).collect(Collectors.toList());
     }
