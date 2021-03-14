@@ -1,15 +1,14 @@
-package com.example.sergfacomufms.domain.student.usecases.getstudentdetailsbyid;
+package com.example.sergfacomufms.domain.person.usecases.getpersondetailsbyid;
 
 
 import lombok.Builder;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Data
 @Builder
-public class StudentDTO implements Serializable {
+public class PersonDTO {
     private Long id;
     private String imageSource;
     private String name;

@@ -7,17 +7,20 @@ const AXIOS = axios.create({
 
 
 export default {
+    getPerson(id){
+        return AXIOS.get(`/people/${id}`)
+    },
     getProfessors(){
-        return AXIOS.get(`/professors`)
+        return AXIOS.get(`/people?role=professor`)
     },
     getProfessorById(id){
-        return AXIOS.get(`/professors/${id}`)
+        return this.getPerson(id)
     },
     getStudents(){
-        return AXIOS.get(`/students`)
+        return AXIOS.get(`/people?role=student`)
     },
     getStudentById(id){
-        return AXIOS.get(`/students/${id}`)
+        return this.getPerson(id)
     },
     hello() {
         return AXIOS.get(`/hello`);
