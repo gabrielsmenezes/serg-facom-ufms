@@ -2,7 +2,7 @@
   <div id="student">
     <b-container>
       <person-perfil
-          v-bind:person="this.getStudentById"
+          v-bind:person="this.student"
       />
     </b-container>
   </div>
@@ -10,16 +10,20 @@
 
 <script>
 import PersonPerfil from "@/components/PersonPerfil"
-import database from "@/database"
+import api from "@/api/backend-api"
 
 export default {
   components: {
     PersonPerfil
   },
 
-  computed: {
-    getStudentById() {
-      return database.getStudentById(this.$route.params.id)
+  mounted() {
+    api.getStudentById(this.$route.params.id).then(response => this.student = response.data).catch(reason => console.log(reason))
+  },
+
+  data() {
+    return {
+      student: {}
     }
   }
 }

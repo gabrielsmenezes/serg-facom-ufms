@@ -15,9 +15,9 @@
       <p v-if="person.egressed">{{ person.egressed }}</p>
     </div>
 
-    <div v-if="person.researchLines">
-      <h3>Research Lines</h3>
-      <research-lines-group v-bind:researchLines="person.researchLines"></research-lines-group>
+    <div v-if="person.interestAreas">
+      <h3>Interest Areas</h3>
+      <b-card v-for="interestArea in person.interestAreas" >{{ interestArea.name }}</b-card>
     </div>
 
     <div v-if="person.description">
